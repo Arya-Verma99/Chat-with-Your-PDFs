@@ -69,4 +69,3 @@ class RAGPipeline:
     
         result = self.llm.invoke(formatted_prompt.to_messages())
         return self.output_parser.invoke(result)
-    

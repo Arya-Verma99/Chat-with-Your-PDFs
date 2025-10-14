@@ -5,7 +5,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 import os
 
 class RAGPipeline:
-    def __init__(self, retriever, groq_api_key, model="deepseek-r1-distill-llama-70b"):
+    def __init__(self, retriever, groq_api_key, model="openai/gpt-oss-120b"):
         self.retriever = retriever
         self.llm = ChatGroq(model=model, temperature=0.1, api_key=groq_api_key)
         self.output_parser = StrOutputParser()
@@ -69,4 +69,5 @@ class RAGPipeline:
     
         result = self.llm.invoke(formatted_prompt.to_messages())
         return self.output_parser.invoke(result)
+
     

@@ -4,7 +4,7 @@ import hashlib
 from typing import List
 
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.vectorstores import VectorStoreRetriever
@@ -123,3 +123,4 @@ class PDFVectorStoreManager:
     # def get_suggested_questions(self) -> List[str]:
 
     #     return self.suggested_questions
+

@@ -1,6 +1,3 @@
-pandas
-numpy
-matplotlib
 langchain
 langchain-community
 langchain-groq
